@@ -12,7 +12,7 @@ Backend service using FastAPI for attorneys to manage the status of prospects an
 
 **Steps needed to start the server:**
 
-From AttorneyLeadManagement directory and execute the following steps in the terminal:
+From AttorneyLeadManagement directory, execute the following steps in the terminal:
 
 This project is built using Python 3.12.3. Ensure you have atleast python version 3.11.6 to ensure all parts work as intended. 
 
