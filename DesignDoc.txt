@@ -1,0 +1,44 @@
+Design Document
+
+Database Design:
+
+Choice: Utilizing a Relational Database (SQLite) with SQLAlchemy
+
+Reasoning:
+
+Simplicity: For simplicity reasons, I used SQLite as it is easy to set it up and get it running on local laptop environment. SQLite works great as the database engine for most low to medium traffic websites. Choice of database may change depending on various other factors like scalability, security and integration with existing software. 
+Structured Data: Lead information is structured and relational, making a relational database an appropriate choice for data storage.
+SQLAlchemy: SQLAlchemy provides an intuitive way to interact with the database, allowing for seamless integration with FastAPI and efficient management of database operations. SQLAlchemy simplifies the connection between Python and SQL databases by automatically converting Python class calls into SQL statements. This makes it possible to query relational databases in a Pythonic way.
+Flexibility: A relational database offers flexibility in querying and managing data relationships, facilitating complex queries and data manipulations when needed.
+
+API Implementation:
+
+Choice: FastAPI Framework
+
+Reasoning:
+
+Performance: FastAPI offers high performance and scalability, making it well-suited for building fast and efficient web APIs.
+Type Safety: FastAPI leverages Python type annotations to automatically generate OpenAPI documentation and perform input validation, ensuring type safety and reducing the likelihood of runtime errors.
+Async Support: FastAPI supports asynchronous programming, allowing for the implementation of asynchronous endpoints and background tasks for improved performance and responsiveness.
+
+Authentication Mechanism:
+
+Choice: Fake Logins for Simplification, and using OAuth2
+
+Reasoning:
+
+Oauth2: OAuth2 is an authorization framework that allows users to grant third-party applications access to their data while keeping their credentials safe. It's the industry standard for web and desktop applications and has been around since 2012.
+Simplicity: Implementing a full-fledged authentication system with user registration, password hashing, and token generation adds complexity to the application. Using fake logins simplifies the authentication process for demonstration purposes.
+Focus on Core Functionality: Prioritizing core functionality (lead management) over authentication simplifies development and testing, allowing for faster prototyping.
+Scalability: While fake logins are not suitable for production environments, they provide a lightweight solution for testing and development. The authentication mechanism can be easily replaced with a more robust solution in the future if needed.
+
+Email Service Integration
+
+Choice: Integration with FastAPI-Mail for SMTP Email Service
+
+Reasoning:
+
+Simplicity and Ease of Integration: FastAPI-Mail simplifies SMTP email integration, minimizing code complexity and speeding up development.
+Configurability and Security: The library offers flexible SMTP configuration options, ensuring secure communication and authentication with email servers.
+Asynchronous Sending: Supports asynchronous email sending, preventing blocking and enhancing application responsiveness.
+Scalability and Reliability: Integration with external SMTP services (e.g., Gmail) ensures reliable email delivery and scalability as the application grows.

@@ -1,0 +1,11 @@
+fastapi 
+fastapi-mail
+uvicorn 
+sqlalchemy
+alembic 
+pydantic 
+python-multipart 
+jinja2 
+email-validator
+pytest
+python-multipart
