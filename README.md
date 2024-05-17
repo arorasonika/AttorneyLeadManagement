@@ -29,6 +29,7 @@ This is the email and app password used for sending the email when a lead is sub
 To generate app password for your gmail account, refer to: https://support.google.com/accounts/answer/185833?hl=en
 
 ATTORNEY_EMAIL_ID=xxx@xxxx.com
+
 ATTORNEY_EMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx
 
 Run the project by typing in terminal: uvicorn lead_management.app.main:app --reload
